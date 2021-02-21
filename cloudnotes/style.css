@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+
+h1 {
+ font-size: 34px;
+ font-weight: 700;
+}
+
+h2 {
+ font-size: 30px;
+}
+
+h4 {
+ font-size: 20px;
+}
+/* .wrapper > div {
+    padding: 2rem;
+    background: rgb(19, 61, 248);
+}
+
+.wrapper > div:nth-child(odd) {
+    background: #ddd;
+} */
+.card-img-top {
+ padding: 1rem;
+}
+
+
+/* ========= Grid =========== */
+/* Using minmax()
+- Minium grid-column width of 250px else fallback to 1 fraction or take full width
+*/
+.wrapper{
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    gap: 2rem; /* gap is spacing in-between and not around */
+    /* grid-auto-rows: 200px;  grid box size is set to 200px, if content doesn fit this size it will overflow */
+    grid-auto-rows: minmax(220px, auto) /*the default box size is 200px, if content overflows box size will auto adjust -- only particular row*/
+}
+
+.wrapper__inside-div {
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+}
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+}
+
